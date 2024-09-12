@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Naam:\tpng.zip\nGrootte:\t143 TB\nAuteur:\tJohn Zip\n"
+  m_text: "Naam:\t0.pdf\nType:\tPDF\nGrootte:\t0B\nAuteur: Unix\nDatum:\t1/1/1970"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.3
-  m_fontSizeBase: 38.3
+  m_fontSize: 34.5
+  m_fontSizeBase: 34.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 3138311414390796502}
   - component: {fileID: 1358777873518776720}
   m_Layer: 5
-  m_Name: ObjectToDrag
+  m_Name: PDFFile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30e6f83d92be46d49900eec2d1281742, type: 3}
+  m_Sprite: {fileID: 1693985250, guid: 2fed0b6f43454e74da8011f63b9797ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctDestination: {fileID: 0}
   incorrectDestination: {fileID: 0}
+  objectDetailParent: {fileID: 0}
   Dropdistance: 40
 --- !u!114 &1358777873518776720
 MonoBehaviour:
