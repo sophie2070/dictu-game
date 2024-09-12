@@ -156,7 +156,7 @@ MonoBehaviour:
   sounds:
   - name: bab
     clip: {fileID: 8300000, guid: a1559c361ab0f08429970f881714697e, type: 3}
-    volume: 1
+    volume: 0.482
     pitch: 1
     loop: 0
     source: {fileID: 0}
