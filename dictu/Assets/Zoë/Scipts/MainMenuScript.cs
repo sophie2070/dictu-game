@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    
-    void Start()
+    public void OnPressPlay()
     {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPressQuit()
     {
-        
+        Application.Quit();
     }
 }
