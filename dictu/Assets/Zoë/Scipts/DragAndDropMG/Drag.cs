@@ -1,41 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Drag : MonoBehaviour
 {
-    public GameObject objectToDrag;
-    public GameObject ObjectDragToPos;
+    private Transform objectToDrag;
+    private GameObject objectDetails;
+    public Transform correctDestination;
+    public Transform incorrectDestination;
+    public GameObject objectDetailParent;
 
     public float Dropdistance;
 
-    public bool isLocked;
+    //public bool isLocked;
 
     Vector2 objectInitPos;
     void Start()
     {
-        objectInitPos = objectToDrag.transform.position;
+        objectDetails = transform.GetChild(0).gameObject;
+        objectToDrag = transform;
+        objectInitPos = objectToDrag.position;
+
+        objectDetails.SetActive(false);
+        objectDetails.transform.parent = objectDetailParent.transform;
     }
+    private void FixedUpdate()
+    {
+        objectDetails.transform.position = objectToDrag.transform.position;
+    }
+
+    public void ClickObject(bool status)
+    {
+        objectDetails.SetActive(status);
+    }
+
 
     public void DragObject()
     {
-        if (!isLocked) 
-        {
-            objectToDrag.transform.position = Input.mousePosition;
-        }
+        objectToDrag.position = Input.mousePosition;
+        objectDetails.SetActive(false);
     }
 
     public void DropObject()
     {
-        float Distance = Vector3.Distance(objectToDrag.transform.position, ObjectDragToPos.transform.position);
-        if (Distance < Dropdistance)
+        if (Vector3.Distance(objectToDrag.position, correctDestination.position) < Dropdistance)
         {
-            isLocked = true;
-            objectToDrag.transform.position = ObjectDragToPos.transform.position;
+            print("Correct Destination");
+
+            //isLocked = true;
+            Destroy(this.gameObject);
+            objectToDrag.position = correctDestination.position;
+        }
+        else if (Vector3.Distance(objectToDrag.position, incorrectDestination.position) < Dropdistance)
+        {
+            print("Incorrect Destination");
+
+            objectToDrag.position = objectInitPos;
         }
         else
         {
-            objectToDrag.transform.position = objectInitPos;
+            print("Invalid Destination");
+
+            objectDetails.SetActive(true);
         }
     }
 }
