@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: "Assets/Zo\xEB/Scenes/Zo\xEBScene.unity"
+    path: "Assets/Scenes/Zo\xEBScene.unity"
     guid: a50140d545512c44cafca70425b1ef1e
   - enabled: 1
     path: Assets/Scenes/MaikelScene.unity
     guid: 79ad57edf4c1e4b498b67ef42b5c0ef9
   - enabled: 1
-    path: "Assets/Zo\xEB/Scenes/MGDragAndDrop.unity"
+    path: Assets/Scenes/mainscene_1.unity
+    guid: bac7543a8795abb4ea5593b94549e347
+  - enabled: 1
+    path: Assets/Scenes/MGDragAndDrop.unity
     guid: 0073d2ddb6406c24885d28ba7d8b5399
   m_configObjects: {}

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rb;
-    float horizontalMove = 0f;
-    float verticalMove = 0f;
+    public Rigidbody2D rb;
+    public float horizontalMove = 0f;
+    public float verticalMove = 0f;
     float inputMagnitude;
     [SerializeField]
     private float rotationSpeed;
